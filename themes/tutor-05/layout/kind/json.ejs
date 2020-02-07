@@ -1,0 +1,14 @@
+[
+<%
+  var count = site.posts.length
+  var i = 0;
+  site.posts.each(function(post){
+    i++
+_%>
+  {
+    "id": <%= date(post.date, "YYMMDDmm") %>,
+    "title": "<%= post.title %>",
+    "url": "<%= post.path %>"
+  }<% if (i!=count){%>,<% } %>
+<% }) _%>
+]

@@ -1,0 +1,45 @@
+<%
+  var title = page.title;
+
+  if (is_archive()){
+    title = __('archive');
+
+    if (is_month()){
+      title += ': ' + page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    title = __('category') + ': ' + page.category;
+  } else if (is_tag()){
+    title = __('tag') + ': ' + page.tag;
+  }
+  
+  var description = '';
+
+  if (page.description) {
+    description = page.description;
+  } else if (page.excerpt) {
+    description = page.excerpt
+                      .replace(/<[^>]*>?/gm, ' ')
+                      .substring(0, 155)
+                      .trim();
+  }
+
+_%>
+<head>
+  <%- partial('meta/html') %>
+  <title><%= title || config.title %></title>
+
+  <% if (theme.favicon){ %>
+     <link href="<%- theme.favicon %>" rel="shortcut icon" type="image/x-icon" />
+  <% } %>
+
+  <%- css(['/css/bulma.css', '/css/fontawesome.css', '/css/main.css']) %>
+
+  <%- partial('meta/seo', {description: description}) %>  
+  <%- partial('meta/opengraph', {title: title, description: description}) %>
+  <%- partial('meta/twitter', {title: title, description: description}) %>
+
+  <%/* unused */%>
+</head>

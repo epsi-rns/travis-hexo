@@ -1,0 +1,9 @@
+<%_ 
+  var layout='kind/default'
+
+  if ((page.layout=='kind/text') 
+  ||  (page.layout=='kind/json')){
+    layout=page.layout
+  }
+_%>
+<%- partial(layout) _%>
