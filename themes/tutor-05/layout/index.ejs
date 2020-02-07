@@ -5,6 +5,12 @@
     <h2 class="subtitle is-4"><%= config.subtitle %></h2>
   </section>
 
+  <section class="section">
+    <%- partial('pagination/06-screenreader') %>
+  </section>
+  
+  <br/>
+
   <div class="post-list">
   <% page.posts.each(function(post){ %>
     <section class="section" id="archive">
