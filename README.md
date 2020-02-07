@@ -1,4 +1,4 @@
-# Hexo Bulma Test Drive
+# Hexo Bulma Test Drive on Traivs
 
 An example of Hexo site using Bulma
 for personal learning purpose.
@@ -10,6 +10,32 @@ for personal learning purpose.
 Please refer to original tutorial:
 
 * [Bulma Step by Step Repository][tutorial-bulma]
+
+-- -- --
+
+## Configuration
+
+Since this use github pages, we soot set the `root` as below example:
+
+**_config.yml**
+
+```
+# root: /child/
+root          : /travis-hexo/
+```
+
+**_config_local.yml**
+
+```
+# root: /child/
+root          : /
+```
+
+In local:
+
+```
+$ hexo server -p 5000 --debug --config _config.yml,_config_local.yml
+```
 
 -- -- --
 
