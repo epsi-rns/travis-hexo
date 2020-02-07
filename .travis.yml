@@ -1,0 +1,24 @@
+# https://hexo.io/docs/github-pages.html
+sudo: false
+
+language: node_js
+node_js:
+  - 10 # use nodejs v10 LTS
+
+cache: npm
+branches:
+  only:
+    - master # build master branch only
+script:
+  - hexo generate # generate static files
+
+deploy:
+  local-dir: public
+  provider: pages
+  skip-cleanup: true
+
+  # Set in travis-ci.org dashboard, marked secure
+  github-token: $GITHUB_TOKEN  
+  keep-history: true
+  on:
+    branch: master
