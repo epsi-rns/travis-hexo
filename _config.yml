@@ -13,7 +13,7 @@ timezone      : Asia/Jakarta
 
 # Extensions
 ## Themes: https://hexo.io/themes/
-theme: tutor-01
+theme: tutor-02
 # theme: landscape
 
 # Custom
@@ -29,7 +29,7 @@ marked:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url           : http://example/
 # root: /child/
-root          : /
+root          : /travis-hexo/
 permalink     : :year/:month/:day/:title/
 permalink_defaults:
 
