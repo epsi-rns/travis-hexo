@@ -1,0 +1,51 @@
+title: Heartbeats for Bulma
+subtitle: Who am I to keep you wait?
+description: Too Long. Too Late. So Far Away. So Far Too Long.
+keywords: 'affection, crush, dream, heartbeat, pulse'
+author: Mataharani
+language: en
+timezone: Asia/Jakarta
+theme: tutor-04
+opengraphimage: images/logo-gear-opengraph.png
+marked:
+  gfm: true
+  breaks: false
+url: 'http://example/'
+root: /
+permalink: ':year/:month/:day/:title/'
+permalink_defaults: null
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: ':lang'
+skip_render: null
+new_post_name: ':title.md'
+default_layout: post
+titlecase: false
+external_link: true
+filename_case: 0
+render_drafts: false
+post_asset_folder: true
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: null
+index_generator:
+  path: /blog
+  per_page: 2
+  order_by: '-date'
+default_category: uncategorized
+category_map: null
+tag_map: null
+date_format: 'MMMM DD, YYYY'
+time_format: 'HH:mm:ss'
+per_page: 10
+pagination_dir: page
+deploy:
+  type: null
