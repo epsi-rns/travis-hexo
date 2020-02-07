@@ -8,26 +8,48 @@
   <title>Heartbeats for Bulma</title>
 
   
-     <link rel="shortcut icon" href="/travis-hexo/favicon.ico">
      <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
   
 
   <link rel="stylesheet" href="/travis-hexo/css/bulma.css">
+<link rel="stylesheet" href="/travis-hexo/css/fontawesome.css">
 <link rel="stylesheet" href="/travis-hexo/css/main.css">
 </head>
 
 <body>
 <nav role="navigation" aria-label="main navigation"
-     class="navbar is-fixed-top is-dark"
+     class="navbar is-fixed-top is-white maxwidth header-deco"
      id="navbar-vue-app">
   <div class="navbar-brand">
     <a class="navbar-item" href="/travis-hexo/">
        <img src="/travis-hexo/images/logo-gear.png" alt="Home">
     </a>
-    <a class="navbar-item">
+    <a class="navbar-item" href="/travis-hexo/blog">
       Blog
     </a>
-    
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Archives
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item"
+             href="/travis-hexo/tags.html">
+            By Tags
+          </a>
+          <a class="navbar-item"
+            href="/travis-hexo/categories.html">
+            By Category
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item"
+            href="/travis-hexo/archives/">
+            By Date
+          </a>
+        </div>
+      </div>
+
     <a role="button" class="navbar-burger burger" 
        aria-label="menu" aria-expanded="false" data-target="navbarBulma"
        @click="isOpen = !isOpen" v-bind:class="{'is-active': isOpen}">
@@ -40,26 +62,8 @@
   <div id="navbarBulma" class="navbar-menu"
        v-bind:class="{'is-active': isOpen}">
     <div class="navbar-start">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Archives
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            By Tags
-          </a>
-          <a class="navbar-item">
-            By Category
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            By Date
-          </a>
-        </div>
-      </div>
-
-      <a class="navbar-item">
+      <a class="navbar-item"
+         href="/travis-hexo/about/longing.html">
         About
       </a>
     </div>
@@ -82,55 +86,118 @@
 
 
 
-  <div class="columns layout-base">
+  <div class="columns is-8 layout-base maxwidth">
     <main role="main" 
-      class="column is-full has-background-light">
+      class="column is-full box-deco has-background-white">
   <section class="section">
-
-  <h1 class="title is-4">Mataharani</h1>
-  <h2 class="subtitle is-4">Who am I to keep you wait?</h2>
-
-  <ul>
-  
-    <li>
-      <b><a href="/travis-hexo/2018/09/07/lyrics/dido-white-flag/">
-        Dido - White Flag
-      </a></b>
-      <br/>
-      
-      <p>September 07, 2018</p>
-      <br/>
-      
-      
-      <p><p>I know you think that I shouldn’t still love you<br>Or tell you that</p>
-<p>But if I didn’t say it, well I’d still have felt it<br>Where’s the sense in that?</p></p>
-      
-    </li>
-  
-    <li>
-      <b><a href="/travis-hexo/2018/02/15/lyrics/vanessa-williams-love-is/">
-        Vanessa Williams - Love Is
-      </a></b>
-      <br/>
-      
-      <p>February 15, 2018</p>
-      <br/>
-      
-      
-      <p><p>They say it’s a river, that circles the Earth</p></p>
-      
-    </li>
-  
-  </ul>
-
+    <h1 class="title is-4">Mataharani</h1>
+    <h2 class="subtitle is-4">Who am I to keep you wait?</h2>
   </section>
+
+  <div class="post-list">
+  
+    <section class="section" id="archive">
+          <div class="meta-item blog-item">
+
+      <strong><a class="meta_link" 
+        href="/travis-hexo/2018/09/07/lyrics/dido-white-flag/">Dido - White Flag
+      </strong></a>
+
+      <div class="meta">
+        <div class="meta_time is-pulled-left">
+          <i class="fa fa-calendar"></i>
+          <time datetime="2018-09-07T07:35:05.000">
+          Sep 07, 2018</time>
+        </div>      
+        <div class="is-pulled-right" id="meta_tags">
+          
+            <a href="/travis-hexo/tags/pop/">
+              <span class="tag is-dark">
+                <span class="fa fa-tag"></span>
+                &nbsp;pop</span></a>
+          
+            <a href="/travis-hexo/tags/2000s/">
+              <span class="tag is-dark">
+                <span class="fa fa-tag"></span>
+                &nbsp;2000s</span></a>
+          
+        </div>
+      </div> 
+
+      <div class="is-clearfix"></div>
+      
+      <div>
+        
+        <p><p>I know you think that I shouldn’t still love you<br>Or tell you that</p>
+<p>But if I didn’t say it, well I’d still have felt it<br>Where’s the sense in that?</p></p>
+        
+      </div>
+
+      <div class="read-more is-light">
+        <a href="/travis-hexo/2018/09/07/lyrics/dido-white-flag/" 
+           class="button is-dark is-small">Read More&nbsp;</a>
+      </div>
+
+    </div>
+
+
+    </section>
+  
+    <section class="section" id="archive">
+          <div class="meta-item blog-item">
+
+      <strong><a class="meta_link" 
+        href="/travis-hexo/2018/02/15/lyrics/vanessa-williams-love-is/">Vanessa Williams - Love Is
+      </strong></a>
+
+      <div class="meta">
+        <div class="meta_time is-pulled-left">
+          <i class="fa fa-calendar"></i>
+          <time datetime="2018-02-15T07:35:05.000">
+          Feb 15, 2018</time>
+        </div>      
+        <div class="is-pulled-right" id="meta_tags">
+          
+            <a href="/travis-hexo/tags/pop/">
+              <span class="tag is-dark">
+                <span class="fa fa-tag"></span>
+                &nbsp;pop</span></a>
+          
+            <a href="/travis-hexo/tags/90s/">
+              <span class="tag is-dark">
+                <span class="fa fa-tag"></span>
+                &nbsp;90s</span></a>
+          
+        </div>
+      </div> 
+
+      <div class="is-clearfix"></div>
+      
+      <div>
+        
+        <p><p>They say it’s a river, that circles the Earth</p></p>
+        
+      </div>
+
+      <div class="read-more is-light">
+        <a href="/travis-hexo/2018/02/15/lyrics/vanessa-williams-love-is/" 
+           class="button is-dark is-small">Read More&nbsp;</a>
+      </div>
+
+    </div>
+
+
+    </section>
+  
+  </div>
+
 </main>
 
   </div>
 
 <footer class="site-footer">
   <div class="navbar is-fixed-bottom maxwidth
-        is-dark has-text-centered is-vcentered">
+        is-white has-text-centered is-vcentered footer-deco">
     <div class="column">
       &copy; 2020.
     </div>

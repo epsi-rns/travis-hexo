@@ -8,26 +8,48 @@
   <title>Susan Wong - The Way We Were</title>
 
   
-     <link rel="shortcut icon" href="/travis-hexo/favicon.ico">
      <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
   
 
   <link rel="stylesheet" href="/travis-hexo/css/bulma.css">
+<link rel="stylesheet" href="/travis-hexo/css/fontawesome.css">
 <link rel="stylesheet" href="/travis-hexo/css/main.css">
 </head>
 
 <body>
 <nav role="navigation" aria-label="main navigation"
-     class="navbar is-fixed-top is-dark"
+     class="navbar is-fixed-top is-white maxwidth header-deco"
      id="navbar-vue-app">
   <div class="navbar-brand">
     <a class="navbar-item" href="/travis-hexo/">
        <img src="/travis-hexo/images/logo-gear.png" alt="Home">
     </a>
-    <a class="navbar-item">
+    <a class="navbar-item" href="/travis-hexo/blog">
       Blog
     </a>
-    
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Archives
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item"
+             href="/travis-hexo/tags.html">
+            By Tags
+          </a>
+          <a class="navbar-item"
+            href="/travis-hexo/categories.html">
+            By Category
+          </a>
+          <hr class="navbar-divider">
+          <a class="navbar-item"
+            href="/travis-hexo/archives/">
+            By Date
+          </a>
+        </div>
+      </div>
+
     <a role="button" class="navbar-burger burger" 
        aria-label="menu" aria-expanded="false" data-target="navbarBulma"
        @click="isOpen = !isOpen" v-bind:class="{'is-active': isOpen}">
@@ -40,26 +62,8 @@
   <div id="navbarBulma" class="navbar-menu"
        v-bind:class="{'is-active': isOpen}">
     <div class="navbar-start">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Archives
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            By Tags
-          </a>
-          <a class="navbar-item">
-            By Category
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            By Date
-          </a>
-        </div>
-      </div>
-
-      <a class="navbar-item">
+      <a class="navbar-item"
+         href="/travis-hexo/about/longing.html">
         About
       </a>
     </div>
@@ -82,9 +86,10 @@
 
 
 
-  <div class="columns layout-base">
+  <div class="columns is-8 layout-base maxwidth">
       <main role="main" 
-        class="column is-two-thirds">
+        class="column is-two-thirds has-background-white
+               blog-column box-deco">
     <div class="blog-post">
       <section>
         <h1 class="title is-4">Susan Wong - The Way We Were</h1>
@@ -102,18 +107,349 @@
     </div><!-- /.blog-post -->
   </main>
 
-  <aside class="column is-one-thirds has-background-info">
-    <div class="blog-sidebar">
-      <h4 class="is-size-4 is-italic">About You</h4>
-      <p>Are you an angel ?</p>
-    </div><!-- /.blog-sidebar -->
+  <aside class="sidebar column is-one-thirds is-paddingless">
+    
+<section class="panel is-light">
+  <div class="panel-header">
+    <p>Related Posts</p>
+    <span class="fa fa-link"></span>
+  </div>
+  <div class="panel-body has-background-white">
+    <ul class="panel-list">
+      
+      <li>
+        
+
+          
+
+        
+
+          
+
+        
+
+          
+
+        
+
+          
+
+        
+
+          
+          <a href="/travis-hexo/2015/05/15/quotes/dashboard-confessional-stolen/">Dashboard Confessional - Stolen</a>
+          
+
+        
+
+          
+
+        
+
+          
+
+        
+
+          
+
+        
+
+          
+
+        
+
+          
+
+        
+
+          
+
+        
+
+          
+
+        
+
+          
+
+        
+      </li>
+      
+    </ul>
+  </div>
+</section>
+
+
+    <!-- view_tag_type : 'before' or 'after' -->
+
+<section class="panel is-light">
+  <div class="panel-header">
+    <p>Tags</p>
+    <span class="fa fa-tag"></span>
+  </div>
+  <div class="panel-body has-background-white">
+    
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/duty/">
+          <span class="fa fa-folder"></span>&nbsp;duty
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/story/">
+          <span class="fa fa-folder"></span>&nbsp;story
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/pop/">
+          <span class="fa fa-folder"></span>&nbsp;pop
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/70s/">
+          <span class="fa fa-folder"></span>&nbsp;70s
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/rock/">
+          <span class="fa fa-folder"></span>&nbsp;rock
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/90s/">
+          <span class="fa fa-folder"></span>&nbsp;90s
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/2000s/">
+          <span class="fa fa-folder"></span>&nbsp;2000s
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/jazz/">
+          <span class="fa fa-folder"></span>&nbsp;jazz
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/80s/">
+          <span class="fa fa-folder"></span>&nbsp;80s
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/alternative/">
+          <span class="fa fa-folder"></span>&nbsp;alternative
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/60s/">
+          <span class="fa fa-folder"></span>&nbsp;60s
+        </a>&nbsp;
+      
+        <a class="tag is-small is-light has-background-white"
+           href="/travis-hexo/tags/subtitle/">
+          <span class="fa fa-folder"></span>&nbsp;subtitle
+        </a>&nbsp;
+      
+    
+  </div>
+</section>
+
+    <section class="panel is-light">
+  <div class="panel-header">
+    <p>Categories</p>
+    <span class="fa fa-tag"></span>
+  </div>
+  <div class="panel-body has-background-white">
+    
+      <a class="tag is-small is-info" href="/travis-hexo/categories/love/">
+        love&nbsp;<span class="fa fa-folder"></span>
+      </a>&nbsp;
+    
+      <a class="tag is-small is-info" href="/travis-hexo/categories/lyric/">
+        lyric&nbsp;<span class="fa fa-folder"></span>
+      </a>&nbsp;
+    
+      <a class="tag is-small is-info" href="/travis-hexo/categories/movie/">
+        movie&nbsp;<span class="fa fa-folder"></span>
+      </a>&nbsp;
+    
+  </div>
+</section>
+
+    <section class="panel is-light">
+  <div class="panel-header">
+    <p>Archives</p>
+    <span class="fa fa-archive"></span>
+  </div>
+  <div class="panel-body has-background-white">
+  
+    <div class ="archive-year" id="2019">
+      <a href="/travis-hexo/archives/#2019">
+      2019</a>
+    </div>
+    
+    
+  
+    <div class ="archive-year" id="2018">
+      <a href="/travis-hexo/archives/#2018">
+      2018</a>
+    </div>
+    
+    
+  
+    <div class ="archive-year" id="2016">
+      <a href="/travis-hexo/archives/#2016">
+      2016</a>
+    </div>
+    
+    
+  
+    <div class ="archive-year" id="2015">
+      <a href="/travis-hexo/archives/#2015">
+      2015</a>
+    </div>
+    
+    
+    <ul class="panel-archive">
+    
+      <li class="list-month">
+        
+        <span id="2015-May">
+              <a href="/travis-hexo/archives/#2015-May">
+              May</a> - 2015</span>
+
+        
+          <ul class="panel-list">
+          
+
+          <li>
+            <a href="/travis-hexo/2015/05/15/lyrics/barbara-streisand-the-way-we-were/">
+              Susan Wong - The Way We Were
+            </a>
+          </li>
+          
+
+          <li>
+            <a href="/travis-hexo/2015/05/15/lyrics/natalie-cole-i-wish-you-love/">
+              Susan Wong - I Wish You Love
+            </a>
+          </li>
+          
+          </ul>
+        
+
+      </li>
+      
+      <li class="list-month">
+        
+        <span id="2015-March">
+              <a href="/travis-hexo/archives/#2015-March">
+              March</a> - 2015</span>
+
+        
+
+      </li>
+      
+      <li class="list-month">
+        
+        <span id="2015-January">
+              <a href="/travis-hexo/archives/#2015-January">
+              January</a> - 2015</span>
+
+        
+
+      </li>
+      
+      <li class="list-month">
+        
+        <span id="2015-October">
+              <a href="/travis-hexo/archives/#2015-October">
+              October</a> - 2015</span>
+
+        
+
+      </li>
+      
+    </ul>
+    
+  
+    <div class ="archive-year" id="2014">
+      <a href="/travis-hexo/archives/#2014">
+      2014</a>
+    </div>
+    
+    
+  
+  </div>
+</section>
+
+    
+
+<section class="panel is-light">
+  <div class="panel-header">
+    <p>Linux/BSD Customization</p>
+    <span class="fa fa-child"></span>
+  </div>
+  <div class="panel-body has-background-white">
+    <ul class="panel-list">
+      
+      
+      <li><a href="http://epsi-rns.github.io/system/2014/04/27/install-blackarch-as-repository.html"
+         >How to Install BlackArch as Repository</a></li>
+      
+      <li><a href="http://epsi-rns.github.io/desktop/2018/07/16/openbox-install.html"
+         >Openbox Install - Common Utility</a></li>
+      
+      <li><a href="http://epsi-rns.github.io/desktop/2018/05/12/openbox-exit.html"
+         >Openbox Utility - Exit</a></li>
+      
+      <li><a href="http://epsi-rns.github.io/desktop/2017/05/05/herbstlustwm-modularized-ruby.html"
+         >Modularized HerbstluftWM in Ruby</a></li>
+      
+      <li><a href="http://epsi-rns.github.io/desktop/2019/06/19/awesome-modularized-statusbar.html"
+         >Awesome WM - Statusbar Modules</a></li>
+      
+    </ul>
+  </div>
+</section>
+
+    
+
+<section class="panel is-light">
+  <div class="panel-header">
+    <p>Web/Mobile Development</p>
+    <span class="fa fa-child"></span>
+  </div>
+  <div class="panel-body has-background-white">
+    <ul class="panel-list">
+      
+      
+      <li><a href="https://epsi-rns.gitlab.io/code/2017/05/21/explaining-monad-01/"
+         >Explaining Monad: References</a></li>
+      
+      <li><a href="https://epsi-rns.gitlab.io/ssg/2018/01/06/ekyll-opensuse-install/"
+         >Jekyll Installation on openSUSE</a></li>
+      
+      <li><a href="https://epsi-rns.gitlab.io/code/2018/01/29/telegram-bot-loop-manual/"
+         >Telegram Bot - Manual Page</a></li>
+      
+      <li><a href="https://epsi-rns.gitlab.io/design/inkscape/inkscape-anti-corruption-movement/"
+         >Inkscape: Anti Corruption Movement</a></li>
+      
+      <li><a href="https://epsi-rns.gitlab.io/ssg/2016/06/22/jekyll-arch-install/"
+         >Jekyll Installation on Arch/Manjaro</a></li>
+      
+    </ul>
+  </div>
+</section>
+
   </aside>
 
   </div>
 
 <footer class="site-footer">
   <div class="navbar is-fixed-bottom maxwidth
-        is-dark has-text-centered is-vcentered">
+        is-white has-text-centered is-vcentered footer-deco">
     <div class="column">
       &copy; 2020.
     </div>
