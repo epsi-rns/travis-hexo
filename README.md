@@ -13,28 +13,26 @@ Please refer to original tutorial:
 
 -- -- --
 
-## Configuration
+### Running Locally
 
-Since this use github pages, we soot set the `root` as below example:
+Since this use github pages, we should set the `root` as below example
 
-**_config.yml**
+This travis example has **_config.yml** as below
 
 ```
-# root: /child/
 root          : /travis-hexo/
 ```
 
-**_config_local.yml**
+And has **_config_local.yml** as below
 
 ```
-# root: /child/
 root          : /
 ```
 
-In local:
+To run locally you can override use this command.
 
 ```
-$ hexo server -p 5000 --debug --config _config.yml,_config_local.yml
+hexo server -p 5000 --debug --config _config.yml,_config_local.yml
 ```
 
 -- -- --
