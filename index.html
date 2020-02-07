@@ -1,22 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
+  
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+  
+  <meta name="generator" content="Karimata 1.2.3 Media Engine" />
+
+  
+  <meta name="theme-color" content="#2980b9">
+
   <title>Welcome to Heartbeat</title>
 
   
-     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
   
 
   <link rel="stylesheet" href="/travis-hexo/css/bulma.css">
 <link rel="stylesheet" href="/travis-hexo/css/fontawesome.css">
 <link rel="stylesheet" href="/travis-hexo/css/main.css">
+
+  
+
+  <meta name="description"
+        content="Too Long. Too Late. So Far Away. So Far Too Long.">
+  <meta name="keywords"
+        content="affection, crush, dream, heartbeat, pulse">
+  <meta name="author"
+        content="Mataharani">
+  
+  
+
+  <meta property="og:locale"       
+        content="en">
+  <meta property="og:title"        
+        content="Welcome to Heartbeat">
+
+
+  <meta property="og:url"          content="http://example/index.html">
+  <meta property="og:site_name"    content="Heartbeats for Bulma">
+  <meta property="og:image"        content="http://example/travis-hexo/images/logo-gear-opengraph.png">
+  <meta property="og:latitude"     content="-6.193665"/>
+  <meta property="og:longitude"    content="106.848558"/>
+  <meta property="og:locality"     content="Jakarta"/>
+  <meta property="og:country-name" content="Indonesia"/>
+
+  
+  <meta name="twitter:title"
+        content="Welcome to Heartbeat">
+
+
+
+
+  <meta name="twitter:site"
+        content="@">
+
+
+
+  
 </head>
 
 <body>
+
 <nav role="navigation" aria-label="main navigation"
      class="navbar is-fixed-top is-white maxwidth header-deco"
      id="navbar-vue-app">
@@ -88,13 +138,17 @@
 
   <div class="columns is-8 layout-base maxwidth">
     <main role="main" 
-     class="column is-full blog-column box-deco
-            has-background-white has-text-centered">
-  <article class="blog-post">
-    <h1 class="title is-4">Mataharani</h1>
-    <h2 class="subtitle is-4">Who am I to keep you wait?</h2>
-    
-    
+     class="column is-full blog-column is-paddingless">
+  <div id="sitedesc_image"></div>
+
+  <div class="box-deco has-background-white has-text-centered">
+    <article class="columns is-centered blog-post">
+      <div class="column is-half">
+        <br/>
+        <h1 class="title is-4">Heartbeats for Bulma</h1>
+        <h2 class="subtitle is-4">Who am I to keep you wait?</h2>
+
+        
   <p>Knowing you're different is only the beginning.
   If you accept these differences
   you'll be able to get past them and grow even closer.</p>
@@ -116,7 +170,10 @@
   <p>Every journey begins with a single step.</p>
   </blockquote>
 
-  </article>
+        <br/>
+      </div>
+    </article>
+  </div>
 </main>
 
   </div>
@@ -130,11 +187,39 @@
   </div>
 </footer>
 
-  <!-- JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
+  
   <script src="/travis-hexo/js/vue.min.js"></script>
 <script src="/travis-hexo/js/bulma-burger-vue.js"></script>
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+  });
+  MathJax.Hub.Queue(function() {
+    // Fix <code> tags after MathJax finishes running. This is a
+    // hack to overcome a shortcoming of Markdown. Discussion at
+    // https://github.com/mojombo/jekyll/issues/199
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+
+  MathJax.Hub.Config({
+  // Autonumbering by mathjax
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  });
+</script>
+
 
 </body>
 </html>
