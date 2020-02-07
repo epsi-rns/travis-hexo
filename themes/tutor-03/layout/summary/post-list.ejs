@@ -1,0 +1,23 @@
+<main role="main" 
+      class="column is-full box-deco has-background-white">
+  <section class="section">
+    <h4 class="title is-4"><%= section_title %></h4>
+  </section>
+
+  <section class="section" id="archive">
+  <ul>
+  <% page.posts.each(function(post){ %>
+    <li>
+      <div class="is-pulled-left">
+        <a href="<%- url_for(post.path) %>">
+        <%= post.title %>
+      </a></div>
+      <div class="is-pulled-right has-text-right"><time>
+        <%= date(post.date, "DD MMM") %>&nbsp;
+      </time></div>
+      <div class="is-clearfix"></div>
+    </li>
+  <% }) %>
+  </ul>
+  </section>
+</main>

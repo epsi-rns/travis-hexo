@@ -1,0 +1,17 @@
+  <% terms.each(function(item){ %>
+  <section class="section box">
+    <div id="<%= item.name %>" class ="anchor-target">
+      <p>
+        <span class="fa fa-folder"></span>&nbsp;<%= taxonomyname %>: 
+        <a href="<%- url_for(item.path) %>"><%= item.name %></a>
+      </p>
+    </div>
+
+    <div class="archive-list">
+    <% item.posts.each(function(post){ %>
+      <%- partial('terms/post-item', {post: post}) %>
+    <% }) %>
+    </div>
+  </section>
+  <% }) %>
+

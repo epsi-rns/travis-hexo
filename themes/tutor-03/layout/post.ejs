@@ -1,0 +1,23 @@
+  <main role="main" 
+        class="column is-two-thirds has-background-white
+               blog-column box-deco">
+    <div class="blog-post">
+      <section>
+        <h1 class="title is-4"><%- page.title %></h1>
+        <p  class="blog-post-meta"
+            ><%= date(page.date, config.date_format) %> by <a href="#"
+            ><%= config.author %></a></p>
+      </section>
+
+      <article>
+        <%- page.content %>
+      </article>
+    </div><!-- /.blog-post -->
+  </main>
+
+  <aside class="column is-one-thirds box-deco has-background-white">
+    <div class="blog-sidebar">
+      <h4 class="is-size-4 is-italic">About You</h4>
+      <p>Are you an angel ?</p>
+    </div><!-- /.blog-sidebar -->
+  </aside>

@@ -1,0 +1,37 @@
+<main role="main" 
+      class="column is-full box-deco has-background-white">
+
+  <section class="section">
+    <h1 class="title is-4"><%= config.author %></h1>
+    <h2 class="subtitle is-4"><%= config.subtitle %></h2>
+
+    <h3 class="title is-3"><%= page.title %></h3>
+  </section>
+
+  <% site.categories.each(function(item){ %>
+  <section class="section box">
+    <div id="<%= item.name %>">
+      <p><%= __('category') %>: 
+        <a href="<%- url_for(item.path) %>"
+           class="button is-small">
+        <%= item.name %></a>
+      </p>
+    </div>
+
+    <ul>
+    <% item.posts.each(function(post){ %>
+      <li>
+        <div class="is-pulled-left">
+          <a href="<%- url_for(post.path) %>">
+          <%= post.title %>
+        </a></div>
+        <div class="is-pulled-right has-text-right"><time>
+          <%= date(post.date, "DD MMM") %>&nbsp;
+        </time></div>
+        <div class="is-clearfix"></div>
+      </li>
+    <% }) %>
+    </ul>
+  </section>
+  <% }) %>
+</main>

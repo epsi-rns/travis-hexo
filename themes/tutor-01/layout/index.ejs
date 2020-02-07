@@ -1,0 +1,23 @@
+<h1><%= config.author %></h1>
+<p><%= config.subtitle %></p>
+
+<blockquote>I pour the <b>journal</b> as daily letter.</blockquote>
+
+<ul>
+  <% page.posts.each(function(post){ %>
+    <li>
+      <b><a href="<%- url_for(post.path) %>">
+        <%= post.title %>
+      </a></b>
+      <br/>
+      
+      <p><%= date(post.date, config.date_format) %></p>
+      <br/>
+      
+      <% if(post.excerpt) { %>
+      <p><%- post.excerpt %></p>
+      <% } %>
+    </li>
+  <% }) %>
+</ul>
+

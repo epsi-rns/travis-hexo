@@ -1,0 +1,78 @@
+<%
+  // Data Model
+
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+  
+  function groupBy(objectArray, property) {
+    return objectArray.reduce(function (acc, obj) {
+      var key = obj[property];
+      if (!acc[key]) {
+        acc[key] = [];
+      }
+      acc[key].push(obj);
+      return acc;
+    }, {});
+  }
+
+  // grouping by date
+
+  const posts = page.posts.map(post => ({ 
+    ...post,
+    year: date(post.date, "YYYY"),
+    month: date(post.date, "MMMM")
+  }));
+
+  const postsByYear = groupBy(posts, 'year');
+  
+  // additional
+  
+  const yearToday = date(new Date(), 'YYYY');
+_%>
+<main role="main" 
+      class="column is-full box-deco has-background-white">
+  <section class="section">
+    <h4 class="title is-4"><%= section_title %></h4>
+  </section>
+
+  <% 
+    const postsSorted = Object.keys(postsByYear).sort(date, -1);
+    postsSorted.forEach(function (year){ 
+  %>
+  <section class="section box">
+    <div class ="anchor-target archive-year" id="<%= year %>">
+       <% if (year == yearToday) {%>
+         This year's posts (<%= year %>)
+       <% } else { %>
+         <%= year %>
+       <% } %>
+    </div>
+    <%
+      const postsByMonth = groupBy(postsByYear[year], 'month');
+      Object.keys(postsByMonth).forEach(function (month){
+    %>
+    <div class="archive-p4">
+      <div class ="archive-month" 
+           id="<%= year %>-<%= month %>">
+           <%= month %> <%= year %></div>
+
+      <div class="archive-list archive-p3">
+        <% postsByMonth[month].forEach(function(post){ %>
+        <div class="archive-item">
+          <div class="is-pulled-left"><a href="<%- url_for(post.path) %>">
+            <%= post.title %>
+          </a></div>
+          <div class="is-pulled-right has-text-right"><time>
+              <%= date(post.date, "DD MMM") %>&nbsp;
+              <span class="fas fa-calendar"></span>
+          </time></div>
+          <div class="is-clearfix"></div>
+        </div>
+        <% }) %>
+      </div>
+
+    </div>
+    <% }) %>
+  </section>
+  <% }) %>
+</main>
+

@@ -1,0 +1,14 @@
+<% 
+  var section_title = __('archive');
+
+  if (is_month()){
+    section_title += ': ' + page.year + '/' + page.month;
+  } else if (is_year()){
+    section_title += ': ' + page.year;
+  }
+%>
+<%-
+  partial('summary/post-list-by-month', {
+    section_title: section_title
+  })
+%>
