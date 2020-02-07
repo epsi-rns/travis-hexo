@@ -3,7 +3,7 @@
 An example of Hexo site using Bulma
 for personal learning purpose.
 
-> Jekyll (Liquid) + Bulma
+> Hexo (EJS) + Bulma
 
 ![Hexo Bulma: Tutor][hexo-bulma-preview]
 
